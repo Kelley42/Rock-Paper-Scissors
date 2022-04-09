@@ -37,7 +37,8 @@ def print_userchoice(userchoice):
 	elif userchoice == "scissors":
 		print(scissors)
 	else:
-		print("Incorrect choice - try again")
+		print("\nIncorrect choice - try again!")
+		game()
 
 
 def print_computerchoice(computerchoice):
