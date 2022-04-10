@@ -73,9 +73,14 @@ def game():
     computerchoice = random.choice(seq)
     print_computerchoice(computerchoice)
     
-    row1 = ["It's a draw", "You lose", "You win"]
-    row2 = ["You win", "It's a draw", "You lose"]
-    row3 = ["You lose", "You win", "It's a draw"]
+    win = "You win!"
+    lose = "You lose."
+    draw = "It's a draw."
+	
+    row1 = [draw, lose, win]
+    row2 = [win, draw, lose]
+    row3 = [lose, win, draw]
+    
     grid = [row1, row2, row3]
 
     y = int(seq.index(computerchoice))
