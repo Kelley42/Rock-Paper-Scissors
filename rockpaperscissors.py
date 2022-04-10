@@ -66,35 +66,23 @@ def playagain():
 
 		
 def game():
-	userchoice = input("\nWhat do you choose? Rock, paper, or scissors? ").strip(" ").lower()
-	print_userchoice(userchoice)
+    userchoice = input("\nWhat do you choose? Rock, paper, or scissors? ").strip(" ").lower()
+    print_userchoice(userchoice)
 
-	seq = ["rock", "paper", "scissors"]
-	computerchoice = random.choice(seq)
-	print_computerchoice(computerchoice)
+    seq = ["rock", "paper", "scissors"]
+    computerchoice = random.choice(seq)
+    print_computerchoice(computerchoice)
+    
+    row1 = ["It's a draw", "You lose", "You win"]
+    row2 = ["You win", "It's a draw", "You lose"]
+    row3 = ["You lose", "You win", "It's a draw"]
+    grid = [row1, row2, row3]
 
-	if computerchoice == "rock":
-		if userchoice == "rock":
-			print("It's a draw.")
-		elif userchoice == "paper":
-			print("You win!")
-		else:
-			print("You lost.")
-	elif computerchoice == "paper":
-		if userchoice == "rock":
-			print("You lost.")
-		elif userchoice == "paper":
-			print("It's a draw")
-		else:
-			print("You win!")
-	else:
-		if userchoice == "rock":
-			print("You win!")
-		elif userchoice == "paper":
-			print("You lose.")
-		else:
-			print("It's a draw.")
-	playagain()
+    y = int(seq.index(computerchoice))
+    x = int(seq.index(userchoice))
+    print(grid[x][y])
+
+    playagain()
 			
 # Start game
 print("Rock Paper Scissors Game!")
